@@ -19,5 +19,12 @@ public class GenericMaximumTest {
         Integer maxInteger = maxObj.maxPositionInteger(9,5,2);
         Assert.assertEquals(Integer.valueOf(9),maxInteger);
     }
+    
+    //TC--1.2
+    @Test
+    public void givenMaxIntegerAtSecondPosition_shouldReturnSame(){
+        Integer maxInteger = maxObj.maxPositionInteger(5,9,2);
+        Assert.assertEquals(Integer.valueOf(9),maxInteger);
+    }
 
 }
