@@ -62,4 +62,10 @@ public class GenericMaximumTest {
         Assert.assertEquals(String.valueOf("PineApple"),maxString);
     }
 
+    //TC--3.2
+    @Test
+    public void givenMaxStringAtSecondPosition_shouldReturnSame(){
+        String maxString = maxObj.maxPositionString("Apple","PineApple","Banana");
+        Assert.assertEquals(String.valueOf("PineApple"),maxString);
+    }
 }
