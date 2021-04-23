@@ -54,4 +54,12 @@ public class GenericMaximumTest {
         Double maxDouble=maxObj.maxPositionDouble(2.1,2.3,2.5);
         Assert.assertEquals(Double.valueOf(2.5),maxDouble);
     }
+
+    //UC-3 Given 3 Strings find the maximum //TC--3.1 //String
+    @Test
+    public void givenMaxStringAtFirstPosition_shouldReturnSame(){
+        String maxString = maxObj.maxPositionString("PineApple","Apple","Banana");
+        Assert.assertEquals(String.valueOf("PineApple"),maxString);
+    }
+
 }
