@@ -48,4 +48,10 @@ public class GenericMaximumTest {
         Assert.assertEquals(Double.valueOf(2.5),maxDouble);
     }
 
+    //TC--2.3
+    @Test
+    public void givenMaxFloatAtThirdPosition_shouldReturnSame(){
+        Double maxDouble=maxObj.maxPositionDouble(2.1,2.3,2.5);
+        Assert.assertEquals(Double.valueOf(2.5),maxDouble);
+    }
 }
