@@ -24,7 +24,7 @@ public class GenericMaximum {
         return maxDouble;
     }
 
-    //UC-2 Given 3 Floats find the maximum //TC--2.1 //String
+    //UC-3 Given 3 Strings find the maximum
     //String
     public String maxPositionString(String firstStringPosition, String secondStringPosition, String thirdStringPosition) {
         String maxString = firstStringPosition;
