@@ -13,6 +13,7 @@ public class GenericMaximum {
         return maxInt;
     }
 
+    //UC-1 Given three Floats Find Maximum
     //Float
     public Double maxPositionDouble(Double firstDoublePosition, Double secondDoublePosition, Double thirdDoublePosition) {
         Double maxDouble = firstDoublePosition;
