@@ -13,6 +13,28 @@ public class GenericMaximumTest {
         maxObj = new GenericMaximum();
     }
 
+    //Refactor-1 Refactor all the 3 to One Generic Method and find the maximum
+    // Integer
+    @Test
+    public void givenThreeIntegers_shouldReturnMaxPosition(){
+        Integer maxInt = maxObj.genericMaximum(10,7,5);
+        Assert.assertEquals(Integer.valueOf(10),maxInt);
+    }
+
+    //Float
+    @Test
+    public void givenThreeFloats_shouldReturnMaxPosition(){
+        Double maxDouble = maxObj.genericMaximum(7.5,10.5,5.5);
+        Assert.assertEquals(Double.valueOf(10.5),maxDouble);
+    }
+
+    //String
+    @Test
+    public void givenThreeStrings_shouldReturnMaxPosition(){
+        String maxString = maxObj.genericMaximum("Watermelon","Banana","Apple");
+        Assert.assertEquals(String.valueOf("Watermelon"),maxString);
+    }
+
     //UC-1 Given 3 Integers find the maximum //TC--1.1 // Integer
     @Test
     public void givenMaxIntegerAtFirstPosition_shouldReturnSame(){

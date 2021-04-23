@@ -2,6 +2,16 @@ package com.bridgelabz.generic;
 
 public class GenericMaximum {
 
+    //Refactor-1 Refactor all the 3 to One Generic Method and find the maximum
+    public <E extends Comparable> E genericMaximum(E firstPosition, E secondPosition, E thirdPosition){
+        E maxPosition=firstPosition;
+        if(secondPosition.compareTo(maxPosition) > 0)
+            maxPosition=secondPosition;
+        if(thirdPosition.compareTo(maxPosition) > 0)
+            maxPosition=thirdPosition;
+        return maxPosition;
+    }
+
     //UC-1 Given three Integers Find Maximum
     //Integer
     public Integer maxPositionInteger(Integer firstIntPosition, Integer secondIntPosition, Integer thirdIntPosition) {
