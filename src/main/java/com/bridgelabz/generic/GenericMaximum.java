@@ -23,4 +23,15 @@ public class GenericMaximum {
             maxDouble = thirdDoublePosition;
         return maxDouble;
     }
+
+    //UC-2 Given 3 Floats find the maximum //TC--2.1 //String
+    //String
+    public String maxPositionString(String firstStringPosition, String secondStringPosition, String thirdStringPosition) {
+        String maxString = firstStringPosition;
+        if (secondStringPosition.compareTo(maxString) > 0)
+            maxString = secondStringPosition;
+        if (thirdStringPosition.compareTo(maxString) > 0)
+            maxString = thirdStringPosition;
+        return maxString;
+    }
 }
