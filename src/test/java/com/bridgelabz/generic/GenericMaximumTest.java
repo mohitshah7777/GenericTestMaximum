@@ -7,6 +7,7 @@ public class GenericMaximumTest {
     GenericMaximum maxObj;
 
     @Before
-    public void classObject(){
-        maxObj=new GenericMaximum();
+    public void classObject() {
+        maxObj = new GenericMaximum();
     }
+}
