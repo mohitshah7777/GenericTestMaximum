@@ -13,4 +13,13 @@ public class GenericMaximum {
         return maxInt;
     }
 
+    //Float
+    public Double maxPositionDouble(Double firstDoublePosition, Double secondDoublePosition, Double thirdDoublePosition) {
+        Double maxDouble = firstDoublePosition;
+        if (secondDoublePosition.compareTo(maxDouble) > 0)
+            maxDouble = secondDoublePosition;
+        if (thirdDoublePosition.compareTo(maxDouble) > 0)
+            maxDouble = thirdDoublePosition;
+        return maxDouble;
+    }
 }
