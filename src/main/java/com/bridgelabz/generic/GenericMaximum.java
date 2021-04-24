@@ -1,27 +1,21 @@
 package com.bridgelabz.generic;
 
-//Refactor-2 Refactor to create Generic Class to take in 3 variables of Generic Type
-public class GenericMaximum<E extends Comparable> {
+public class GenericMaximum {
 
-    E firstPosition;
-    E secondPosition;
-    E thirdPosition;
+    //UC-4 Extend the max method to take more than three parameters
+    public <E extends Comparable> E max(E[] inputArray) {
 
-    public GenericMaximum(E firstPosition, E secondPosition, E thirdPosition) {
-        this.firstPosition = firstPosition;
-        this.secondPosition = secondPosition;
-        this.thirdPosition = thirdPosition;
-    }
+        for (int i = 0 ; i<(inputArray.length - 1 ); i ++) {
+            for ( int j = 0; j<(inputArray.length - 1); j++) {
+                if ( inputArray[j].compareTo(inputArray[j + 1]) < 0 ) {
+                    E temp = inputArray[j];
+                    inputArray[j] = inputArray[j + 1];
+                    inputArray[j+1] = temp;
+                }
+            }
+        }
 
-    public E maximumGeneric(){
-        return genericMaximum(firstPosition,secondPosition,thirdPosition);
-    }
-    public <E extends Comparable> E genericMaximum(E firstPosition, E secondPosition, E thirdPosition){
-        E maxPosition=firstPosition;
-        if(secondPosition.compareTo(maxPosition) > 0)
-            maxPosition=secondPosition;
-        if(thirdPosition.compareTo(maxPosition) > 0)
-            maxPosition=thirdPosition;
+        E maxPosition = inputArray[0];
         return maxPosition;
     }
 }
